@@ -2,12 +2,12 @@ from bs4 import BeautifulSoup
 import urllib
 
 def convertstring(str):
-	str = str.replace(u"\xe4", "a")
-	str = str.replace(u"\xc4", "A")
-	str = str.replace(u"\xf6", "o")
-	str = str.replace(u"\xd6", "O")
-	str = str.replace(u"\xfc", "u")
-	str = str.replace(u"\xdc", "U")
+	str = str.replace(u"\xe4", "ae")
+	str = str.replace(u"\xc4", "Ae")
+	str = str.replace(u"\xf6", "oe")
+	str = str.replace(u"\xd6", "Oe")
+	str = str.replace(u"\xfc", "ue")
+	str = str.replace(u"\xdc", "Ue")
 	str = str.replace(u"\xdf", "ss")
 	return str
 
