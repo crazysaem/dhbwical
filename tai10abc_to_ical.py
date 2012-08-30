@@ -16,6 +16,10 @@ ical = open("tai10abc.ics", "w")
 #uncomment to use a proxy
 #proxies = {'http': 'http://PROXY_URL:PROXY_PORT'}
 ical.write("BEGIN:VCALENDAR\n")
+ical.write("METHOD:PUBLISH\n")
+ical.write("PRODID:-//crzy//iCal 3.0//EN\n")
+ical.write("CALSCALE:GREGORIAN\n")
+ical.write("X-WR-CALNAME:TAI10ABC\n")
 ical.write("X-WR-TIMEZONE:Europe/Berlin\n")
 ical.write("VERSION:2.0\n")
 ical.write("BEGIN:VTIMEZONE\n")
