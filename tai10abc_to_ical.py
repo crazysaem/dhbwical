@@ -58,12 +58,15 @@ for weeks in range(12):
 				starttime = properties[0].text[:2] + properties[0].text[:5][-2:]
 				endtime = properties[0].text[:8][-2:] + properties[0].text[:11][-2:]
 				description = properties[1].text
-				location = properties[2].text
-				
-				location = convertstring(location)
 				description = convertstring(description)
+
+				if len(properties)>2:
+					location = properties[2].text		
+					location = convertstring(location)	
+				else:
+					location = ""						
 				
-				ical.write("LOCATION:%s\n" % (location))
+				ical.write("LOCATION:%s\n" % (location))				
 				ical.write("SUMMARY:%s\n" % (description))
 				ical.write("DESCRIPTION:%s\n" % (description))
 				ical.write("DTSTART;TZID=Europe/Berlin:%s\n" % (date + "T" + starttime + "00"))
