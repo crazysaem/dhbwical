@@ -40,7 +40,7 @@ ical.write("TZNAME:CET\n")
 ical.write("END:STANDARD\n")
 ical.write("END:VTIMEZONE\n")
 
-for weeks in range(12):
+for weeks in range(50):
 	#html = urllib.urlopen(link, proxies=proxies)
 	html = urllib.urlopen(link)
 	soup = BeautifulSoup(html)
